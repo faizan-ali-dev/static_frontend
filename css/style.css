@@ -2206,6 +2206,72 @@ main {
   letter-spacing: 2px;
 }
 
+/* ---------- RXC Responsive — Small Mobile (≤ 375px) ---------- */
+@media (max-width: 375px) {
+  /* Layout & Containers */
+  .container { padding: 0 12px; }
+  .rxc-hero { padding: 40px 16px; gap: 24px; margin-bottom: 32px; }
+  .rxc-hero-icon-wrap { width: 100px; height: 100px; }
+  .rxc-hero-title { font-size: 1.8rem; }
+  .rxc-hero-tagline { font-size: 1rem; }
+  .rxc-hero-desc { font-size: 0.9rem; margin-bottom: 20px; }
+  
+  /* Buttons */
+  .rxc-download-btn {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .slide-btn { padding: 8px 16px; font-size: 0.8rem; }
+
+  /* Tags & Platform */
+  .rxc-platform-tags { gap: 6px; }
+  .rxc-platform-tags span { font-size: 0.65rem; padding: 4px 6px; }
+
+  /* Stats Grid */
+  .rxc-hero-stats { gap: 8px; margin-bottom: 24px; }
+  .rxc-stat { padding: 8px; }
+  .rxc-stat-value { font-size: 0.95rem; }
+  .rxc-stat-label { font-size: 0.6rem; }
+  
+  /* Tabs */
+  .rxc-tab { padding: 8px 12px; font-size: 0.8rem; }
+  
+  /* Cards & Sections */
+  .rxc-section-title { font-size: 1.25rem; }
+  .rxc-content-card, .rxc-feature-card, .rxc-game-card, .rxc-reward-card, .rxc-review-card, .rxc-proscons-card {
+    padding: 20px 14px;
+  }
+  
+  /* Details Table */
+  .rxc-details-table td { padding: 10px; font-size: 0.8rem; }
+  .rxc-table-label { white-space: normal; }
+  
+  /* Carousel Slide */
+  .carousel-slide { padding: 20px 14px; }
+  .carousel-slide .slide-icon { width: 56px; height: 56px; }
+  .carousel-slide .slide-title { font-size: 1.05rem; }
+  .carousel-slide .slide-desc { font-size: 0.8rem; }
+  
+  /* Feature List & Bullet */
+  .rxc-feature-item { padding: 14px; gap: 10px; }
+  .rxc-feature-bullet { width: 36px; height: 36px; font-size: 1.1rem; }
+  
+  /* CTA Banner */
+  .rxc-cta-banner { padding: 24px 14px; margin-top: 24px; }
+  .rxc-cta-banner h3 { font-size: 1.25rem; }
+  
+  /* FAQ */
+  .rxc-faq-list { gap: 10px; }
+  .rxc-faq-item summary { padding: 14px 16px; font-size: 0.9rem; }
+  .rxc-faq-item summary::after { font-size: 1.2rem; }
+  .rxc-faq-item p { padding: 0 16px 14px; font-size: 0.85rem; }
+  
+  /* Review Avatars */
+  .rxc-review-avatar { width: 44px; height: 44px; font-size: 1rem; }
+}
+
 /* ---------- RXC Responsive — Tablet (≥768px) ---------- */
 @media (min-width: 768px) {
   /* Re-enable animations and particles for larger screens */
