@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Applications | APK Manager</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+      .placeholder-icon {
+          width: 50px; height: 50px; background: rgba(255, 255, 255, 0.05); border-radius: 12px;
+          display: flex; align-items: center; justify-content: center;
+          color: var(--text-muted); font-size: 0.75rem; overflow: hidden; font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="container nav-inner">
+        <a href="index.html" class="logo">APK<span>Manager</span></a>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="apks.html">APKs</a>
+            <a href="softwares.html">Softwares</a>
+            <a href="blog.html">Blog</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </div>
+    <div class="nav-overlay"></div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="page-header">
+            <h1>💻 Software Applications</h1>
+        </div>
+
+        <!-- Search -->
+        <form class="search-bar">
+            <input type="text" name="q" placeholder="Search softwares...">
+            <button type="button">Search</button>
+        </form>
+
+        <!-- Category Filter -->
+        <div class="filter-pills">
+            <a href="#" class="filter-pill active">All</a>
+            <a href="#" class="filter-pill">Utilities</a>
+            <a href="#" class="filter-pill">Design</a>
+            <a href="#" class="filter-pill">Security</a>
+        </div>
+
+        <div class="card-grid">
+            <!-- Software Card 1 -->
+            <div class="app-card fade-in">
+                <div class="app-card-header">
+                    <div class="app-card-icon placeholder-icon">Icon</div>
+                    <div class="app-card-info">
+                        <h3 class="app-card-name">
+                            <a href="#">Internet Download Manager</a>
+                            <span class="featured-badge">Featured</span>
+                        </h3>
+                        <p class="app-card-dev">Tonec Inc.</p>
+                    </div>
+                </div>
+                <p class="app-card-desc">Fastest download accelerator for Windows with browser integration.</p>
+                <div class="app-card-meta">
+                    <span>📂 Downloaders</span>
+                    <span>📦 12 MB</span>
+                    <span>💻 Windows 10/11</span>
+                </div>
+            </div>
+            <!-- Software Card 2 -->
+            <div class="app-card fade-in">
+                <div class="app-card-header">
+                    <div class="app-card-icon placeholder-icon">Icon</div>
+                    <div class="app-card-info">
+                        <h3 class="app-card-name"><a href="#">WinRAR 7.0</a></h3>
+                        <p class="app-card-dev">RARLAB</p>
+                    </div>
+                </div>
+                <p class="app-card-desc">The ultimate archiving software to extract and compress files.</p>
+                <div class="app-card-meta">
+                    <span>📂 Utilities</span>
+                    <span>📦 5 MB</span>
+                    <span>💻 Windows All</span>
+                </div>
+            </div>
+            <!-- Software Card 3 -->
+            <div class="app-card fade-in">
+                <div class="app-card-header">
+                    <div class="app-card-icon placeholder-icon">Icon</div>
+                    <div class="app-card-info">
+                        <h3 class="app-card-name"><a href="#">Adobe Premiere Rush</a></h3>
+                        <p class="app-card-dev">Adobe Systems</p>
+                    </div>
+                </div>
+                <p class="app-card-desc">Quickly edit professional videos right from your desktop or phone.</p>
+                <div class="app-card-meta">
+                    <span>📂 Video Editors</span>
+                    <span>📦 1.4 GB</span>
+                    <span>💻 Windows 11</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="#">← Prev</a>
+            <span class="current-page">Page 1 of 3</span>
+            <a href="#">Next →</a>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 APK Manager. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | APK Manager</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+      .placeholder-img {
+          width: 100%; height: 200px; background: rgba(255, 255, 255, 0.05); border-radius: 8px 8px 0 0;
+          display: flex; align-items: center; justify-content: center;
+          color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;
+      }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="container nav-inner">
+        <a href="index.html" class="logo">APK<span>Manager</span></a>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="apks.html">APKs</a>
+            <a href="softwares.html">Softwares</a>
+            <a href="blog.html">Blog</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </div>
+    <div class="nav-overlay"></div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="page-header">
+            <h1>📝 Blog</h1>
+        </div>
+
+        <!-- Search -->
+        <form class="search-bar">
+            <input type="text" name="q" placeholder="Search posts...">
+            <button type="button">Search</button>
+        </form>
+
+        <!-- Featured Posts -->
+        <section class="fade-in mb-24">
+            <div class="section-header">
+                <h2>⭐ Featured Posts</h2>
+            </div>
+            <div class="card-grid">
+                <div class="blog-card fade-in">
+                    <div class="placeholder-img">Image Placeholder</div>
+                    <div class="blog-card-body">
+                        <h3><a href="#">Top 10 Android Apps of the Month</a></h3>
+                        <p class="blog-card-excerpt">Discover the most useful and trending applications this month for your Android device.</p>
+                        <div class="blog-card-meta">
+                            <span>📅 October 12, 2026</span>
+                            <span>📂 Android</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <div class="filter-pills">
+            <a href="#" class="filter-pill active">All</a>
+            <a href="#" class="filter-pill">Android</a>
+            <a href="#" class="filter-pill">Windows</a>
+            <a href="#" class="filter-pill">Guides</a>
+        </div>
+
+        <!-- All Posts -->
+        <div class="card-grid">
+            <div class="blog-card fade-in">
+                <div class="placeholder-img">Image Placeholder</div>
+                <div class="blog-card-body">
+                    <h3><a href="#">How to Install Custom ROMs Safely</a></h3>
+                    <p class="blog-card-excerpt">A comprehensive guide on unlocking bootloaders, flashing TWRP, and installing custom ROMs safely without bricking.</p>
+                    <div class="blog-card-meta">
+                        <span>📅 October 05, 2026</span>
+                        <span>📂 Guides</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card fade-in">
+                <div class="placeholder-img">Image Placeholder</div>
+                <div class="blog-card-body">
+                    <h3><a href="#">Best VPN Services in 2026</a></h3>
+                    <p class="blog-card-excerpt">Reviewing the top speed and security VPN apps for your mobile and desktop devices.</p>
+                    <div class="blog-card-meta">
+                        <span>📅 September 28, 2026</span>
+                        <span>📂 Android</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card fade-in">
+                <div class="placeholder-img">Image Placeholder</div>
+                <div class="blog-card-body">
+                    <h3><a href="#">Windows 12 Update Features</a></h3>
+                    <p class="blog-card-excerpt">Everything you need to know about the latest Microsoft Windows update and features.</p>
+                    <div class="blog-card-meta">
+                        <span>📅 September 20, 2026</span>
+                        <span>📂 Windows</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="#">← Prev</a>
+            <span class="current-page">Page 1 of 8</span>
+            <a href="#">Next →</a>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 APK Manager. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>

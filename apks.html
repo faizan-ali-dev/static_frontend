@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APK Applications | APK Manager</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+      .placeholder-icon {
+          width: 50px; height: 50px; background: rgba(255, 255, 255, 0.05); border-radius: 12px;
+          display: flex; align-items: center; justify-content: center;
+          color: var(--text-muted); font-size: 0.75rem; overflow: hidden; font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="container nav-inner">
+        <a href="index.html" class="logo">APK<span>Manager</span></a>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="apks.html">APKs</a>
+            <a href="softwares.html">Softwares</a>
+            <a href="blog.html">Blog</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </div>
+    <div class="nav-overlay"></div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="page-header">
+            <h1>📱 APK Applications</h1>
+        </div>
+
+        <!-- Search -->
+        <form class="search-bar">
+            <input type="text" name="q" placeholder="Search apps...">
+            <button type="button">Search</button>
+        </form>
+
+        <!-- Category Filter -->
+        <div class="filter-pills">
+            <a href="#" class="filter-pill active">All</a>
+            <a href="#" class="filter-pill">Games</a>
+            <a href="#" class="filter-pill">Productivity</a>
+            <a href="#" class="filter-pill">Social</a>
+        </div>
+
+        <div class="card-grid">
+            <!-- App Card -->
+            <div class="app-card fade-in">
+                <div class="app-card-header">
+                    <div class="app-card-icon placeholder-icon">Icon</div>
+                    <div class="app-card-info">
+                        <h3 class="app-card-name">
+                            <a href="#">CapCut Premium</a>
+                            <span class="featured-badge">Featured</span>
+                        </h3>
+                        <p class="app-card-dev">Bytedance</p>
+                    </div>
+                </div>
+                <p class="app-card-desc">Advanced video editor with premium effects unlocked.</p>
+                <div class="app-card-meta">
+                    <span>📂 Video Editors</span>
+                    <span>📦 92 MB</span>
+                </div>
+            </div>
+            <!-- App Card -->
+            <div class="app-card fade-in">
+                <div class="app-card-header">
+                    <div class="app-card-icon placeholder-icon">Icon</div>
+                    <div class="app-card-info">
+                        <h3 class="app-card-name"><a href="#">Spotify MOD</a></h3>
+                        <p class="app-card-dev">Spotify AB</p>
+                    </div>
+                </div>
+                <p class="app-card-desc">Ad-free music streaming with offline downloads enabled.</p>
+                <div class="app-card-meta">
+                    <span>📂 Music & Audio</span>
+                    <span>📦 40 MB</span>
+                </div>
+            </div>
+            <!-- App Card -->
+            <div class="app-card fade-in">
+                <div class="app-card-header">
+                    <div class="app-card-icon placeholder-icon">Icon</div>
+                    <div class="app-card-info">
+                        <h3 class="app-card-name"><a href="#">Clash of Clans</a></h3>
+                        <p class="app-card-dev">Supercell</p>
+                    </div>
+                </div>
+                <p class="app-card-desc">Unlimited gems and resources server version.</p>
+                <div class="app-card-meta">
+                    <span>📂 Strategy Games</span>
+                    <span>📦 210 MB</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="#">← Prev</a>
+            <span class="current-page">Page 1 of 5</span>
+            <a href="#">Next →</a>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 APK Manager. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
