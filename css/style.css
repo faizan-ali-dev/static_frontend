@@ -1245,8 +1245,9 @@ main {
   height: 150%;
   background: radial-gradient(circle at 30% 40%, rgba(138, 43, 226, .1) 0%, transparent 40%),
               radial-gradient(circle at 70% 60%, rgba(255, 215, 0, .05) 0%, transparent 40%);
-  animation: rxc-glow-rotate 15s linear infinite;
   pointer-events: none;
+  display: none; /* Disabled on mobile for performance */
+  will-change: transform;
 }
 
 /* Floating Particles */
@@ -1255,6 +1256,8 @@ main {
   top: 0; left: 0; width: 100%; height: 100%;
   pointer-events: none;
   z-index: 0;
+  display: none; /* Completely disabled on mobile screens as requested */
+  will-change: transform;
 }
 .rxc-hero-particles span {
   position: absolute;
@@ -1365,12 +1368,13 @@ main {
 }
 
 .rxc-hero-title {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 8px;
   letter-spacing: -1px;
   text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  text-align: center;
 }
 
 .rxc-hero-tagline {
@@ -1409,7 +1413,7 @@ main {
 
 .rxc-hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   max-width: 600px;
   margin: 0 auto 32px;
@@ -1814,12 +1818,13 @@ main {
   display: flex;
   gap: 12px;
   margin-bottom: 24px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   background: rgba(255, 255, 255, 0.02);
   padding: 8px;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  display: inline-flex;
 }
 .rxc-tab {
   padding: 12px 28px;
@@ -2203,8 +2208,12 @@ main {
 
 /* ---------- RXC Responsive — Tablet (≥768px) ---------- */
 @media (min-width: 768px) {
+  /* Re-enable animations and particles for larger screens */
+  .rxc-hero-glow { display: block; animation: rxc-glow-rotate 15s linear infinite; }
+  .rxc-hero-particles { display: block; }
+
   .rxc-hero { padding: 64px 40px; }
-  .rxc-hero-title { font-size: 3.5rem; }
+  .rxc-hero-title { font-size: 3.5rem; text-align: left; }
   .rxc-hero-stats { grid-template-columns: repeat(4, 1fr); }
   .rxc-features-grid { grid-template-columns: repeat(2, 1fr); }
   .rxc-rewards-grid { grid-template-columns: repeat(2, 1fr); }
