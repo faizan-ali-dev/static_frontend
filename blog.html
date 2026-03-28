@@ -3,134 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | APK Manager</title>
+    <meta name="description" content="Read our latest blog posts, news, and guides.">
+    <title>Blog | Royal X Casino</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-      .placeholder-img {
-          width: 100%; height: 200px; background: rgba(255, 255, 255, 0.05); border-radius: 8px 8px 0 0;
-          display: flex; align-items: center; justify-content: center;
-          color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;
-      }
-    </style>
 </head>
 <body>
 
-<!-- Header -->
-<header class="site-header">
-    <div class="container nav-inner">
-        <a href="index.html" class="logo">APK<span>Manager</span></a>
-        <button class="hamburger" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="apks.html">APKs</a>
-            <a href="softwares.html">Softwares</a>
-            <a href="blog.html">Blog</a>
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
-        </nav>
-    </div>
-    <div class="nav-overlay"></div>
-</header>
-
-<main>
-    <div class="container">
-        <div class="page-header">
-            <h1>📝 Blog</h1>
+    <!-- Header Navigation -->
+    <header class="rx-header">
+        <div class="rx-container header-inner">
+            <a href="index.html" class="logo">
+                ROYAL X <span>CASINO</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <nav class="rx-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="apks.html">APKs</a></li>
+                    <li><a href="softwares.html">Softwares</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="index.html#games">Games</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#analytics">Insights</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-solid-blue btn-sm">Login</a>
+                    <a href="register.html" class="btn btn-gold btn-sm">Register</a>
+                </div>
+            </nav>
         </div>
+        <div class="nav-overlay"></div>
+    </header>
 
-        <!-- Search -->
-        <form class="search-bar">
-            <input type="text" name="q" placeholder="Search posts...">
-            <button type="button">Search</button>
-        </form>
-
-        <!-- Featured Posts -->
-        <section class="fade-in mb-24">
-            <div class="section-header">
-                <h2>⭐ Featured Posts</h2>
+    <main style="padding-top: 80px; min-height: 80vh;">
+        <div class="rx-container">
+            <div class="page-header">
+                <h1>📝 Royal X Blog</h1>
+                <p class="text-muted">News, guides, strategies and platform updates.</p>
             </div>
+
+            <!-- Search -->
+            <form class="search-bar" onsubmit="event.preventDefault();">
+                <input type="text" name="q" placeholder="Search posts...">
+                <button type="submit">Search</button>
+            </form>
+
+            <!-- Featured Posts -->
+            <section style="margin-bottom: 40px; padding: 0; border: none;">
+                <h2 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--gold-primary);">⭐ Featured Posts</h2>
+                <div class="card-grid" style="grid-template-columns: 1fr;">
+                    <div class="blog-card" style="display: flex; flex-direction: column;">
+                        <div class="placeholder-img" style="height: 250px;">Featured Image Placeholder</div>
+                        <div class="blog-card-body">
+                            <h3 style="font-size: 1.6rem;"><a href="#">Top 10 Casino Winning Strategies of the Month</a></h3>
+                            <p class="blog-card-excerpt">Discover the most useful and trending strategies to maximize your payouts on games like Andar Bahar and Slots.</p>
+                            <div class="blog-card-meta">
+                                <span>📅 October 12, 2026</span>
+                                <span>📂 Strategies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category Filter -->
+            <div class="filter-pills">
+                <a href="#" class="filter-pill active">All</a>
+                <a href="#" class="filter-pill">Guides</a>
+                <a href="#" class="filter-pill">Updates</a>
+                <a href="#" class="filter-pill">Events</a>
+            </div>
+
+            <!-- All Posts -->
             <div class="card-grid">
-                <div class="blog-card fade-in">
+                <div class="blog-card">
                     <div class="placeholder-img">Image Placeholder</div>
                     <div class="blog-card-body">
-                        <h3><a href="#">Top 10 Android Apps of the Month</a></h3>
-                        <p class="blog-card-excerpt">Discover the most useful and trending applications this month for your Android device.</p>
+                        <h3><a href="#">How to Deposit Funds Safely</a></h3>
+                        <p class="blog-card-excerpt">A comprehensive guide on securely depositing funds using Jazzcash, Easypaisa and Crypto without hidden friction.</p>
                         <div class="blog-card-meta">
-                            <span>📅 October 12, 2026</span>
-                            <span>📂 Android</span>
+                            <span>📅 October 05, 2026</span>
+                            <span>📂 Guides</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="placeholder-img">Image Placeholder</div>
+                    <div class="blog-card-body">
+                        <h3><a href="#">Best Tournaments in 2026</a></h3>
+                        <p class="blog-card-excerpt">Reviewing the top ranked global tournaments and live events happening exclusively on Royal X Casino.</p>
+                        <div class="blog-card-meta">
+                            <span>📅 September 28, 2026</span>
+                            <span>📂 Events</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="placeholder-img">Image Placeholder</div>
+                    <div class="blog-card-body">
+                        <h3><a href="#">V2.48.2 Update Features</a></h3>
+                        <p class="blog-card-excerpt">Everything you need to know about the latest App update including zero lag and new live streaming rooms.</p>
+                        <div class="blog-card-meta">
+                            <span>📅 September 20, 2026</span>
+                            <span>📂 Updates</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Category Filter -->
-        <div class="filter-pills">
-            <a href="#" class="filter-pill active">All</a>
-            <a href="#" class="filter-pill">Android</a>
-            <a href="#" class="filter-pill">Windows</a>
-            <a href="#" class="filter-pill">Guides</a>
-        </div>
-
-        <!-- All Posts -->
-        <div class="card-grid">
-            <div class="blog-card fade-in">
-                <div class="placeholder-img">Image Placeholder</div>
-                <div class="blog-card-body">
-                    <h3><a href="#">How to Install Custom ROMs Safely</a></h3>
-                    <p class="blog-card-excerpt">A comprehensive guide on unlocking bootloaders, flashing TWRP, and installing custom ROMs safely without bricking.</p>
-                    <div class="blog-card-meta">
-                        <span>📅 October 05, 2026</span>
-                        <span>📂 Guides</span>
-                    </div>
-                </div>
-            </div>
-            <div class="blog-card fade-in">
-                <div class="placeholder-img">Image Placeholder</div>
-                <div class="blog-card-body">
-                    <h3><a href="#">Best VPN Services in 2026</a></h3>
-                    <p class="blog-card-excerpt">Reviewing the top speed and security VPN apps for your mobile and desktop devices.</p>
-                    <div class="blog-card-meta">
-                        <span>📅 September 28, 2026</span>
-                        <span>📂 Android</span>
-                    </div>
-                </div>
-            </div>
-            <div class="blog-card fade-in">
-                <div class="placeholder-img">Image Placeholder</div>
-                <div class="blog-card-body">
-                    <h3><a href="#">Windows 12 Update Features</a></h3>
-                    <p class="blog-card-excerpt">Everything you need to know about the latest Microsoft Windows update and features.</p>
-                    <div class="blog-card-meta">
-                        <span>📅 September 20, 2026</span>
-                        <span>📂 Windows</span>
-                    </div>
-                </div>
+            <div class="pagination">
+                <a href="#">← Prev</a>
+                <span class="current-page">Page 1 of 8</span>
+                <a href="#">Next →</a>
             </div>
         </div>
+    </main>
 
-        <div class="pagination">
-            <a href="#">← Prev</a>
-            <span class="current-page">Page 1 of 8</span>
-            <a href="#">Next →</a>
+    <!-- Footer -->
+    <footer class="rx-footer">
+        <div class="rx-container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <a href="#" class="logo">ROYAL X <span>CASINO</span></a>
+                    <p>Pakistan's most trusted online casino platform. Play the best slots, card games and sports betting.</p>
+                </div>
+                <div class="footer-col links-col">
+                    <h4>QUICK LINKS</h4>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#games">Games</a>
+                    <a href="index.html#features">Promotions</a>
+                    <a href="#">VIP Program</a>
+                </div>
+                <div class="footer-col links-col">
+                    <h4>SUPPORT</h4>
+                    <a href="index.html#faq">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Responsible Gaming</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Royal X Casino. All rights reserved. 18+ Only.</p>
+            </div>
         </div>
-    </div>
-</main>
+    </footer>
 
-<footer class="site-footer">
-    <div class="container footer-content">
-        <div class="footer-links">
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </div>
-        <p class="footer-copy">&copy; 2026 APK Manager. All rights reserved.</p>
-    </div>
-</footer>
+    <!-- Scripts -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.rx-nav');
+        const overlay = document.querySelector('.nav-overlay');
 
-<script src="./js/main.js"></script>
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('open');
+            overlay.classList.toggle('show');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+    </script>
 </body>
 </html>

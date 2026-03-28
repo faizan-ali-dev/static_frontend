@@ -3,128 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APK Applications | APK Manager</title>
+    <meta name="description" content="Download the latest APK Applications.">
+    <title>APK Applications | Royal X Casino</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-      .placeholder-icon {
-          width: 50px; height: 50px; background: rgba(255, 255, 255, 0.05); border-radius: 12px;
-          display: flex; align-items: center; justify-content: center;
-          color: var(--text-muted); font-size: 0.75rem; overflow: hidden; font-weight: bold;
-      }
-    </style>
 </head>
 <body>
 
-<!-- Header -->
-<header class="site-header">
-    <div class="container nav-inner">
-        <a href="index.html" class="logo">APK<span>Manager</span></a>
-        <button class="hamburger" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="apks.html">APKs</a>
-            <a href="softwares.html">Softwares</a>
-            <a href="blog.html">Blog</a>
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
-        </nav>
-    </div>
-    <div class="nav-overlay"></div>
-</header>
-
-<main>
-    <div class="container">
-        <div class="page-header">
-            <h1>📱 APK Applications</h1>
+    <!-- Header Navigation -->
+    <header class="rx-header">
+        <div class="rx-container header-inner">
+            <a href="index.html" class="logo">
+                ROYAL X <span>CASINO</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <nav class="rx-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="apks.html" class="active">APKs</a></li>
+                    <li><a href="softwares.html">Softwares</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#games">Games</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#analytics">Insights</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn btn-solid-blue btn-sm">Login</a>
+                    <a href="register.html" class="btn btn-gold btn-sm">Register</a>
+                </div>
+            </nav>
         </div>
+        <div class="nav-overlay"></div>
+    </header>
 
-        <!-- Search -->
-        <form class="search-bar">
-            <input type="text" name="q" placeholder="Search apps...">
-            <button type="button">Search</button>
-        </form>
+    <main style="padding-top: 80px; min-height: 80vh;">
+        <div class="rx-container">
+            <div class="page-header">
+                <h1>📱 Premium APKs</h1>
+                <p class="text-muted">Browse and download the latest modded Android applications.</p>
+            </div>
 
-        <!-- Category Filter -->
-        <div class="filter-pills">
-            <a href="#" class="filter-pill active">All</a>
-            <a href="#" class="filter-pill">Games</a>
-            <a href="#" class="filter-pill">Productivity</a>
-            <a href="#" class="filter-pill">Social</a>
-        </div>
+            <!-- Search -->
+            <form class="search-bar" onsubmit="event.preventDefault();">
+                <input type="text" name="q" placeholder="Search apps...">
+                <button type="submit">Search</button>
+            </form>
 
-        <div class="card-grid">
-            <!-- App Card -->
-            <div class="app-card fade-in">
-                <div class="app-card-header">
-                    <div class="app-card-icon placeholder-icon">Icon</div>
-                    <div class="app-card-info">
-                        <h3 class="app-card-name">
-                            <a href="#">CapCut Premium</a>
-                            <span class="featured-badge">Featured</span>
-                        </h3>
-                        <p class="app-card-dev">Bytedance</p>
+            <!-- Category Filter -->
+            <div class="filter-pills">
+                <a href="#" class="filter-pill active">All</a>
+                <a href="#" class="filter-pill">Games</a>
+                <a href="#" class="filter-pill">Productivity</a>
+                <a href="#" class="filter-pill">Social</a>
+            </div>
+
+            <div class="card-grid">
+                <!-- App Card -->
+                <div class="app-card">
+                    <div class="app-card-header">
+                        <div class="placeholder-icon">Icon</div>
+                        <div class="app-card-info">
+                            <h3 class="app-card-name">
+                                <a href="#">CapCut Premium</a>
+                                <span class="featured-badge">Featured</span>
+                            </h3>
+                            <p class="app-card-dev">Bytedance</p>
+                        </div>
+                    </div>
+                    <p class="app-card-desc">Advanced video editor with premium effects unlocked.</p>
+                    <div class="app-card-meta">
+                        <span>📂 Video Editors</span>
+                        <span>📦 92 MB</span>
                     </div>
                 </div>
-                <p class="app-card-desc">Advanced video editor with premium effects unlocked.</p>
-                <div class="app-card-meta">
-                    <span>📂 Video Editors</span>
-                    <span>📦 92 MB</span>
-                </div>
-            </div>
-            <!-- App Card -->
-            <div class="app-card fade-in">
-                <div class="app-card-header">
-                    <div class="app-card-icon placeholder-icon">Icon</div>
-                    <div class="app-card-info">
-                        <h3 class="app-card-name"><a href="#">Spotify MOD</a></h3>
-                        <p class="app-card-dev">Spotify AB</p>
+                <!-- App Card -->
+                <div class="app-card">
+                    <div class="app-card-header">
+                        <div class="placeholder-icon">Icon</div>
+                        <div class="app-card-info">
+                            <h3 class="app-card-name"><a href="#">Spotify MOD</a></h3>
+                            <p class="app-card-dev">Spotify AB</p>
+                        </div>
+                    </div>
+                    <p class="app-card-desc">Ad-free music streaming with offline downloads enabled.</p>
+                    <div class="app-card-meta">
+                        <span>📂 Music & Audio</span>
+                        <span>📦 40 MB</span>
                     </div>
                 </div>
-                <p class="app-card-desc">Ad-free music streaming with offline downloads enabled.</p>
-                <div class="app-card-meta">
-                    <span>📂 Music & Audio</span>
-                    <span>📦 40 MB</span>
-                </div>
-            </div>
-            <!-- App Card -->
-            <div class="app-card fade-in">
-                <div class="app-card-header">
-                    <div class="app-card-icon placeholder-icon">Icon</div>
-                    <div class="app-card-info">
-                        <h3 class="app-card-name"><a href="#">Clash of Clans</a></h3>
-                        <p class="app-card-dev">Supercell</p>
+                <!-- App Card -->
+                <div class="app-card">
+                    <div class="app-card-header">
+                        <div class="placeholder-icon">Icon</div>
+                        <div class="app-card-info">
+                            <h3 class="app-card-name"><a href="#">Clash of Clans</a></h3>
+                            <p class="app-card-dev">Supercell</p>
+                        </div>
+                    </div>
+                    <p class="app-card-desc">Unlimited gems and resources server version.</p>
+                    <div class="app-card-meta">
+                        <span>📂 Strategy Games</span>
+                        <span>📦 210 MB</span>
                     </div>
                 </div>
-                <p class="app-card-desc">Unlimited gems and resources server version.</p>
-                <div class="app-card-meta">
-                    <span>📂 Strategy Games</span>
-                    <span>📦 210 MB</span>
-                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#">← Prev</a>
+                <span class="current-page">Page 1 of 5</span>
+                <a href="#">Next →</a>
             </div>
         </div>
+    </main>
 
-        <div class="pagination">
-            <a href="#">← Prev</a>
-            <span class="current-page">Page 1 of 5</span>
-            <a href="#">Next →</a>
+    <!-- Footer -->
+    <footer class="rx-footer">
+        <div class="rx-container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <a href="#" class="logo">ROYAL X <span>CASINO</span></a>
+                    <p>Pakistan's most trusted online casino platform. Play the best slots, card games and sports betting.</p>
+                </div>
+                <div class="footer-col links-col">
+                    <h4>QUICK LINKS</h4>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#games">Games</a>
+                    <a href="index.html#features">Promotions</a>
+                    <a href="#">VIP Program</a>
+                </div>
+                <div class="footer-col links-col">
+                    <h4>SUPPORT</h4>
+                    <a href="index.html#faq">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Responsible Gaming</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Royal X Casino. All rights reserved. 18+ Only.</p>
+            </div>
         </div>
-    </div>
-</main>
+    </footer>
 
-<footer class="site-footer">
-    <div class="container footer-content">
-        <div class="footer-links">
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </div>
-        <p class="footer-copy">&copy; 2026 APK Manager. All rights reserved.</p>
-    </div>
-</footer>
+    <!-- Scripts -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.rx-nav');
+        const overlay = document.querySelector('.nav-overlay');
 
-<script src="./js/main.js"></script>
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('open');
+            overlay.classList.toggle('show');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+    </script>
 </body>
 </html>

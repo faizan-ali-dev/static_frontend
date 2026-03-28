@@ -3,78 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | APK Manager</title>
+    <meta name="description" content="Register for Royal X Casino.">
+    <title>Register | Royal X Casino</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-<!-- Header -->
-<header class="site-header">
-    <div class="container nav-inner">
-        <a href="index.html" class="logo">APK<span>Manager</span></a>
-        <button class="hamburger" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="apks.html">APKs</a>
-            <a href="softwares.html">Softwares</a>
-            <a href="blog.html">Blog</a>
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
-        </nav>
-    </div>
-    <div class="nav-overlay"></div>
-</header>
+    <!-- Header Navigation -->
+    <header class="rx-header">
+        <div class="rx-container header-inner">
+            <a href="index.html" class="logo">
+                ROYAL X <span>CASINO</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <nav class="rx-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="apks.html">APKs</a></li>
+                    <li><a href="softwares.html">Softwares</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#games">Games</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#analytics">Insights</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="index.html#download" class="btn btn-gold-outline btn-sm">Download APK</a>
+                    <a href="login.html" class="btn btn-solid-blue btn-sm">Login</a>
+                    <a href="register.html" class="btn btn-gold btn-sm">Register</a>
+                </div>
+            </nav>
+        </div>
+        <div class="nav-overlay"></div>
+    </header>
 
-<!-- Main Content -->
-<main>
-    <div class="container">
-        <div class="form-page">
-            <div class="form-card fade-in">
+    <!-- Main Content -->
+    <main>
+        <div class="rx-container form-page">
+            <div class="form-card auth-form">
                 <h1>📝 Register</h1>
-                <form>
-                    <table style="width: 100%; margin-bottom: var(--gap-lg);">
+                <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+                    <table style="width: 100%; margin-bottom: 24px;">
                         <tr>
-                            <th><label style="color: var(--text-secondary); font-size: 0.95rem;">Username:</label></th>
-                            <td><input type="text" name="username" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-primary); color: var(--text-primary); margin-bottom: 12px;"></td>
+                            <th><label for="username">Username:</label></th>
                         </tr>
                         <tr>
-                            <th><label style="color: var(--text-secondary); font-size: 0.95rem;">Email ID:</label></th>
-                            <td><input type="email" name="email" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-primary); color: var(--text-primary); margin-bottom: 12px;"></td>
+                            <td><input type="text" id="username" name="username" placeholder="Choose a username" required></td>
                         </tr>
                         <tr>
-                            <th><label style="color: var(--text-secondary); font-size: 0.95rem;">Password:</label></th>
-                            <td><input type="password" name="password" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-primary); color: var(--text-primary); margin-bottom: 12px;"></td>
+                            <th><label for="email">Email ID or Phone:</label></th>
                         </tr>
                         <tr>
-                            <th><label style="color: var(--text-secondary); font-size: 0.95rem;">Confirm:</label></th>
-                            <td><input type="password" name="password_confirm" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-primary); color: var(--text-primary);"></td>
+                            <td><input type="text" id="email" name="email" placeholder="Enter your email or phone" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="password">Password:</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="password" id="password" name="password" placeholder="Create a strong password" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="password_confirm">Confirm Password:</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="password" id="password_confirm" name="password_confirm" placeholder="Confirm your password" required></td>
                         </tr>
                     </table>
-                    <button type="button" class="btn-primary" style="width: 100%;">Register</button>
+                    <button type="submit" class="btn btn-gold btn-full pulse-anim">Create Account</button>
                 </form>
                 <div class="form-footer">
-                    <p>Already have an account? <a href="login.html">Login</a></p>
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<!-- Footer -->
-<footer class="site-footer">
-    <div class="container footer-content">
-        <div class="footer-links">
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+    <!-- Footer -->
+    <footer class="rx-footer">
+        <div class="rx-container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <a href="#" class="logo">ROYAL X <span>CASINO</span></a>
+                    <p>Pakistan's most trusted online casino platform. Play the best slots, card games and sports betting.</p>
+                </div>
+                <div class="footer-col links-col">
+                    <h4>QUICK LINKS</h4>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#games">Games</a>
+                    <a href="index.html#features">Promotions</a>
+                    <a href="#">VIP Program</a>
+                </div>
+                <div class="footer-col links-col">
+                    <h4>SUPPORT</h4>
+                    <a href="index.html#faq">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Responsible Gaming</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="footer-col download-col">
+                    <h4>DOWNLOAD APP</h4>
+                    <a href="index.html#download" class="app-btn android">
+                        <span class="icon">📱</span>
+                        <span>Download for<br><strong>Android APK</strong></span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Royal X Casino. All rights reserved. 18+ Only.</p>
+            </div>
         </div>
-        <p class="footer-copy">&copy; 2026 APK Manager. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-<script src="./js/main.js"></script>
+    <!-- Scripts -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.rx-nav');
+        const overlay = document.querySelector('.nav-overlay');
+
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('open');
+            overlay.classList.toggle('show');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+    </script>
 </body>
 </html>
