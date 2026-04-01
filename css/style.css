@@ -486,6 +486,58 @@ section {
   margin-bottom: 0;
 }
 
+/* Premium Feature List (replaces boxes for a cleaner look) */
+.premium-feature-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.pf-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+.pf-item:hover {
+  background: rgba(255, 215, 0, 0.03);
+  border-bottom-color: transparent;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateX(5px);
+}
+.pf-icon {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.pf-item:hover .pf-icon {
+  background: rgba(255, 215, 0, 0.1);
+  transform: scale(1.1) rotate(5deg);
+}
+.pf-content h4 {
+  margin: 0 0 4px 0;
+  color: var(--gold-light);
+  font-size: 1.1rem;
+}
+.pf-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 /* Guides / Ordered Lists */
 .guide-list {
   counter-reset: custom-counter;
@@ -706,27 +758,147 @@ section {
 .tab-btn { background: var(--bg-card); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); padding: 8px 16px; border-radius: var(--radius-full); font-size: 0.85rem; cursor: pointer; transition: 0.3s; }
 .tab-btn.active, .tab-btn:hover { background: rgba(255, 215, 0, 0.1); color: var(--gold-primary); border-color: var(--gold-primary); }
 
-.payment-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 30px; }
-.payment-card { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 20px; transition: var(--transition); }
-.payment-card:hover { border-color: var(--gold-primary); transform: translateY(-3px); }
+.payment-grid.updated-payment-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 30px; }
 
-.payment-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 16px; }
-.payment-logo { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 1.2rem; }
-.payment-logo.green { background: linear-gradient(135deg, #4caf50, #2e7d32); }
-.payment-logo.red { background: linear-gradient(135deg, #f44336, #c62828); }
-.payment-logo.blue { background: linear-gradient(135deg, #2196f3, #1565c0); }
-.payment-logo.cyan { background: linear-gradient(135deg, #00BCD4, #00838F); }
+/* Modern Payment Cards Redesign */
+.modern-pay-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  z-index: 1;
+}
 
-.payment-title { font-size: 1.1rem; font-weight: 700; color: #fff; line-height: 1.2; }
-.sm-txt { display: block; font-size: 0.7rem; color: var(--text-muted); font-weight: 400; }
+.modern-pay-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
 
-.payment-details { display: flex; flex-direction: column; gap: 12px; }
-.detail-row { display: flex; justify-content: space-between; font-size: 0.85rem; }
-.detail-row span { color: var(--text-muted); }
-.detail-row strong { color: #fff; }
+.card-bg-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+  pointer-events: none;
+}
 
-.trust-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-.trust-badges span { font-size: 0.75rem; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 4px; }
+.modern-pay-card:hover .card-bg-glow {
+  opacity: 1;
+}
+
+.easypaisa-card:hover {
+  border-color: #00C853;
+  box-shadow: 0 10px 30px rgba(0, 200, 83, 0.15);
+}
+.easypaisa-card .card-bg-glow {
+  background: radial-gradient(circle at center, rgba(0, 200, 83, 0.1) 0%, transparent 60%);
+}
+
+.jazzcash-card:hover {
+  border-color: #E20000;
+  box-shadow: 0 10px 30px rgba(226, 0, 0, 0.15);
+}
+.jazzcash-card .card-bg-glow {
+  background: radial-gradient(circle at center, rgba(226, 0, 0, 0.1) 0%, transparent 60%);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.pay-logo {
+  height: 40px;
+  width: 150px;
+}
+.pay-logo svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.pay-badge {
+  background: rgba(255, 215, 0, 0.15);
+  color: var(--gold-primary);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.easypaisa-card .pay-badge {
+  background: rgba(0, 200, 83, 0.1);
+  color: #00C853;
+  border-color: rgba(0, 200, 83, 0.3);
+}
+
+.jazzcash-card .pay-badge {
+  background: rgba(226, 0, 0, 0.1);
+  color: #ff6b6b;
+  border-color: rgba(226, 0, 0, 0.3);
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.pay-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pay-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pay-name {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.pay-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.modern-pay-card:hover .pay-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transform: rotate(-10deg);
+}
 
 
 /* ============================================================
@@ -1088,6 +1260,7 @@ section {
   .section-heading h2 { font-size: 2.2rem; }
   
   .features-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .premium-feature-list { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .pros-cons-grid { grid-template-columns: repeat(2, 1fr); }
   
   .analytics-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
@@ -1100,7 +1273,7 @@ section {
   .step-card { width: calc(50% - 10px); }
   .step-connector { display: none; }
 
-  .payment-grid { grid-template-columns: repeat(2, 1fr); }
+  .payment-grid.updated-payment-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .reviews-grid { grid-template-columns: repeat(2, 1fr); }
   
   .footer-top { grid-template-columns: repeat(2, 1fr); }
@@ -1123,6 +1296,7 @@ section {
   .hero-title { font-size: 2.5rem; max-width: 900px; }
   
   .features-grid { grid-template-columns: repeat(3, 1fr); }
+  .premium-feature-list { grid-template-columns: repeat(2, 1fr); }
 
   .analytics-grid { grid-template-columns: repeat(4, 1fr); }
   
@@ -1137,7 +1311,7 @@ section {
   .step-card { width: 100%; }
   .step-connector { display: block; width: 50px; height: 2px; margin: 50px 0 0 0; flex-shrink: 0; }
   
-  .payment-grid { grid-template-columns: repeat(4, 1fr); }
+  .payment-grid.updated-payment-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .faq-accordion { max-width: 800px; margin: 0 auto; }
   
