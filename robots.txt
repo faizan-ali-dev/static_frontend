@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://royalx-casino-download.com/sitemap.xml
